@@ -23,6 +23,9 @@ body{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
+ion-item ion-label:nth-child(1){
+  margin-left: 8px;
+}
 .letra{
   margin: 0;
   color: #FF440A;
@@ -30,20 +33,23 @@ body{
 .letra-chica{
   font-size: 14px;
 }
-.letra-chica:first-child{
-  margin-right: 4rem;
-}
-.sub-letra{
-  margin-top: .2rem;
-  color: black;
-}
 ion-item{
   --background: transparent;
   --color: white;
   --border-color: white;
   --padding-start: 0px;
-  --padding-top: 30px;
+  --padding-top: 20px;
 }
-.lol{
+.container-sub{
   display: flex;
+}
+.letra-register{
+  color: black;
+}
+.letra-recover{
+  color: white;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
 }
