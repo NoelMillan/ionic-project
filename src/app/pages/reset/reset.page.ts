@@ -8,9 +8,15 @@ import { NavigationService } from 'src/app/services/navigation.service';
 })
 export class ResetPage implements OnInit {
 
+  iconPressed: boolean = false;
+
   constructor(public navigationService: NavigationService) { }
 
   ngOnInit() {
+    this.iconPressed = false;
   }
 
+  cambia(){
+    this.iconPressed = !this.iconPressed
+  }
 }
