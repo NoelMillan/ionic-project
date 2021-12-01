@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: 'app-reset',
+  templateUrl: './reset.page.html',
+  styleUrls: ['./reset.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class ResetPage implements OnInit {
 
   constructor(public navigationService: NavigationService) { }
 

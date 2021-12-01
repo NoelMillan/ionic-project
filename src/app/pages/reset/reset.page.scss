@@ -27,7 +27,7 @@ body{
 .container{
     width: 80%;
     height: auto;
-    margin: 10% auto;
+    margin: 20% auto;
 }
 .container__item-up{
     display: flex;
@@ -39,12 +39,18 @@ body{
 }
 .caja-chica{
     padding: .5rem;
-    min-width: 100px;
-    max-width: 100px;
+    max-width: 140px;
+    min-width: 140px;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 }
+ion-item{
+    --background: transparent;
+    --color: rgb(255, 138, 230);
+    --border-color: rgba(255, 0, 200, 0.89);
+    --padding-start: 0px;
+  }
 .letra{
     margin: 0;
     color: #FF440A;
@@ -54,10 +60,10 @@ body{
     flex-direction: column;
     align-items: flex-start;
 }
-.item-down__inline{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.item-down__inline:nth-child(2){
+    margin-top: 20px;
+}
+.item-down__inline:nth-child(3){
     margin-top: 20px;
 }
 .item-down__inline p{
@@ -84,8 +90,4 @@ body{
     position: absolute;
     bottom: -5px;
     width: 100%;
-}
-.wtf{
-    width: 100%;
-    height: 20%;
 }

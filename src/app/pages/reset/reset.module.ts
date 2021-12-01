@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProfilePageRoutingModule } from './profile-routing.module';
+import { ResetPageRoutingModule } from './reset-routing.module';
 
-import { ProfilePage } from './profile.page';
+import { ResetPage } from './reset.page';
 import { BarraComponent } from 'src/app/components/barra/barra.component';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { BarraComponent } from 'src/app/components/barra/barra.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfilePageRoutingModule
+    ResetPageRoutingModule
   ],
-  declarations: [ProfilePage, BarraComponent]
+  declarations: [ResetPage]
 })
-export class ProfilePageModule {}
+export class ResetPageModule {}

@@ -12,12 +12,15 @@ export class NavigationService {
     this.router.navigateByUrl('/home')
   }
   goRegister(){
-    this.router.navigateByUrl('/register')
+    this.router.navigateByUrl('/register');
   }
   goRecover(){
-    this.router.navigateByUrl('/recover')
+    this.router.navigateByUrl('/recover');
   }
   goProfile(){
-    this.router.navigateByUrl('/profile')
+    this.router.navigateByUrl('/profile');
+  }
+  goReset(){
+    this.router.navigateByUrl('/reset');
   }
 }

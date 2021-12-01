@@ -3,41 +3,37 @@
   <!-- Rectángulo con vectores -->
   <div class="nav-bar">
     <div class="nav-bar__item"></div>
-    </div>
+  </div>
   <div class="ion-padding-top nav-bar__text">
     <h2>Perfil</h2>
     <div class="nav-bar__icon"><img src="../../../assets/images/perfil.png" width="40%"></div>
   </div>
   <!-- Contenido -->
   <div class="container">
-    <div class="container__item-up">
-      <div class="ion-text-center ion-padding-end">
-        <h1>7</h1>
-        <p class="disabled">Shopping centers visited</p>
-      </div>
-      <div class="ion-text-center ion-padding-start">
-        <h1>4</h1>
-        <p class="disabled">Reviews</p>
-      </div>
-    </div>
     <div class="container__item-down">
       <div class="item-down__inline">
         <div class="caja-chica">
-          <h5 class="letra ion-text-center">Name</h5>
+          <h5 class="letra ion-text-center">Old Password</h5>
         </div>
-        <p>Noel Millán Rebollo</p>
+        <ion-item mode="ios">
+          <ion-input type="Password"></ion-input>
+        </ion-item>
       </div>
       <div class="item-down__inline">
         <div class="caja-chica">
-          <h5 class="letra ion-text-center">Email</h5>
+          <h5 class="letra ion-text-center">New Password</h5>
         </div>
-        <p class="letra-email">noel.millan@hotmail.com</p>
+        <ion-item mode="ios">
+          <ion-input type="Password"></ion-input>
+        </ion-item>
       </div>
       <div class="item-down__inline">
         <div class="caja-chica">
-          <h5 class="letra ion-text-center">Password</h5>
+          <h5 class="letra ion-text-center">Repeat Password</h5>
         </div>
-        <span><p>**************<br><div (click)="navigationService.goReset()">Change your password</div></p></span>
+        <ion-item mode="ios">
+          <ion-input type="Password"></ion-input>
+        </ion-item>
       </div>
     </div>
   </div>
