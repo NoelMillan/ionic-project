@@ -161,7 +161,7 @@ ion-card{
     width: 100%;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    --background: white;
+    --background: linear-gradient(45deg, #EC008C, #FC6767);
 
     img {
         object-fit: cover;
@@ -173,10 +173,9 @@ ion-card{
     }
 }
 ion-card p{
-    color: black;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 0px 4px 0px 4px;
+    color: white;
+    font-size: 16px;
+    padding: 0px 8px 0px 8px;
 }
 
 .swiper-slide-active{
@@ -184,10 +183,11 @@ ion-card p{
 
     ion-card{
         img{
-            transform: scale(1, 1);
+            transform: scale(1.07, 1.07);
         }
+        cursor: pointer;
     }
 }
 .swiper-slide{
-    transition: 400ms all ease-in-out;
+    transition: .7s all ease-in-out;
 }
