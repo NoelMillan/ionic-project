@@ -29,6 +29,8 @@ body{
 .nav-bar__list{
     position: fixed;
     left: 0;
+    z-index: 2;
+    margin: 25px 0px 0px 5px;
 }
 .container{
     width: 80%;
@@ -141,8 +143,11 @@ ion-fab-list ion-fab-button{
     --background-activated: linear-gradient(90deg, #FC6767, #EC008C);
     --background-hover: linear-gradient(90deg, #FC6767, #EC008C);
     --close-icon-font-size: 30px;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
+}
+ion-fab-list ion-fab-button:first-child{
+    margin-top: 10px;
 }
 ion-fab-button{
     --background: linear-gradient(45deg, #FC6767, #EC008C);
@@ -150,6 +155,6 @@ ion-fab-button{
     --background-hover: linear-gradient(45deg, #FC6767, #EC008C);
     --close-icon-font-size: 30px;
     --box-shadow: #00000054 4px 4px 5px;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
 }

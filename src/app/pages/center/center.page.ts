@@ -12,7 +12,6 @@ export class CenterPage implements OnInit {
     slidesPerView: 1.5,
     centeredSlides: true,
     loop: true,
-    spaceBetween: 10,
   };
 
   iconPressed: boolean = false;
