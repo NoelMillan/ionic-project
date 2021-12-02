@@ -30,12 +30,6 @@ body{
     position: fixed;
     left: 0;
 }
-.nav-bar__icon{
-    margin-left: 8px;
-    left: 0;
-    width: 40%;
-    cursor: pointer;
-}
 .container{
     width: 80%;
     min-height: 50%;
@@ -115,9 +109,9 @@ body{
 .container-footer__item{
     background-color: white;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    padding: 3px;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
 }
 .container-footer-gap{
     display: inline-flex;
@@ -139,5 +133,23 @@ body{
 .container-footer-gap span{
     color: white;
     font-size: 12px;
-    margin: 4px;
+    margin: 6px;
+}
+ion-fab-list ion-fab-button{
+    transition: .5s;
+    --background: linear-gradient(90deg, #FC6767, #EC008C);
+    --background-activated: linear-gradient(90deg, #FC6767, #EC008C);
+    --background-hover: linear-gradient(90deg, #FC6767, #EC008C);
+    --close-icon-font-size: 30px;
+    width: 60px;
+    height: 60px;
+}
+ion-fab-button{
+    --background: linear-gradient(45deg, #FC6767, #EC008C);
+    --background-activated: linear-gradient(45deg, #FC6767, #EC008C);
+    --background-hover: linear-gradient(45deg, #FC6767, #EC008C);
+    --close-icon-font-size: 30px;
+    --box-shadow: #00000054 4px 4px 5px;
+    width: 60px;
+    height: 60px;
 }

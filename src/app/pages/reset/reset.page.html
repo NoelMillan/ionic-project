@@ -6,13 +6,15 @@
   </div>
   <div class="ion-padding-top nav-bar__text">
     <div class="nav-bar__list">
-      <div class="nav-bar__icon" (click)="cambia()"><img src="../../../assets/images/perfil.png" width="100%"></div>
-      <ng-container *ngIf="iconPressed">
-        <div class="nav-bar__icon"><img src="../../../assets/images/center.png" width="100%"></div>
-        <div class="nav-bar__icon" (click)="navigationService.goHome()"><img src="../../../assets/images/disconnect.png" width="100%"></div>
-      </ng-container>
+      <ion-fab vertical="top" horizontal="start" slot="fixed" mode="ios">
+        <ion-fab-button closeIcon="close"><img src="../../../assets/images/perfil.png" width="100%"></ion-fab-button>
+        <ion-fab-list>
+          <ion-fab-button (click)="navigationService.goCenter()"><img src="../../../assets/images/center.png" width="100%"></ion-fab-button>
+          <ion-fab-button (click)="navigationService.goHome()"><img src="../../../assets/images/disconnect.png" width="100%"></ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
     </div>
-    <h2>Perfil</h2>
+    <h2>Profile</h2>
   </div>
   <!-- Contenido -->
   <div class="container">

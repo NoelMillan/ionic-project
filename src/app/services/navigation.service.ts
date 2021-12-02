@@ -23,4 +23,7 @@ export class NavigationService {
   goReset(){
     this.router.navigateByUrl('/reset');
   }
+  goCenter(){
+    this.router.navigateByUrl('/center')
+  }
 }

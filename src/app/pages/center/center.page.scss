@@ -1,18 +1,18 @@
 body{
     background: #ECE9E6;
     color: black;
+    height: 100%;
 }
 .nav-bar{
     position: absolute;
     z-index: -1;
     width: 100%;
 }
-.footer{
-    position: absolute;
-    z-index: -1;
+.nav-bar__item{
     width: 100%;
-    height: 120px;
-    bottom: 0;
+    height: 100vh;
+    background: no-repeat;
+    background-image: url('../../../assets/svg/barra.svg');
 }
 .nav-bar__text{
     display: flex;
@@ -24,10 +24,16 @@ body{
     left: 0;
     z-index: 2;
 }
+.nav-bar__icon{
+    margin-left: 8px;
+    left: 0;
+    width: 40%;
+    cursor: pointer;
+}
 .container{
     width: 80%;
-    height: auto;
-    margin: 20% auto;
+    min-height: 50%;
+    margin: 10% auto;
 }
 .container__item-up{
     display: flex;
@@ -39,22 +45,12 @@ body{
 }
 .caja-chica{
     padding: .5rem;
-    max-width: 140px;
-    min-width: 140px;
+    min-width: 100px;
+    max-width: 100px;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 }
-.caja-chica.last-item{
-    max-width: 170px;
-    min-width: 170px;
-}
-ion-item{
-    --background: transparent;
-    --color: rgb(255, 138, 230);
-    --border-color: rgba(255, 0, 200, 0.89);
-    --padding-start: 0px;
-  }
 .letra{
     margin: 0;
     color: #FF440A;
@@ -63,11 +59,12 @@ ion-item{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-height: 280px;
 }
-.item-down__inline:nth-child(2){
-    margin-top: 20px;
-}
-.item-down__inline:nth-child(3){
+.item-down__inline{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 .item-down__inline p{
@@ -83,12 +80,6 @@ ion-item{
     font-size: 10px;
     color: #969696bd;
     cursor: pointer;
-}
-.nav-bar__item{
-    width: 100%;
-    height: 100vh;
-    background: no-repeat;
-    background-image: url('../../../assets/svg/barra.svg');
 }
 .footer__item{
     position: absolute;
@@ -144,17 +135,6 @@ ion-item{
     font-size: 12px;
     margin: 6px;
 }
-.caja-media{
-    margin: 25px auto 20px auto;
-    padding: .5rem;
-    width: 175px;
-    background: #F43379;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-.caja-media > .letra{
-    color: white;
-}
 ion-fab-list ion-fab-button{
     transition: .5s;
     --background: linear-gradient(90deg, #FC6767, #EC008C);
@@ -172,4 +152,42 @@ ion-fab-button{
     --box-shadow: #00000054 4px 4px 5px;
     width: 60px;
     height: 60px;
+}
+ion-slides {
+    margin: 30% auto;
+}
+
+ion-card{
+    width: 100%;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    --background: white;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        min-height: 120px;
+        max-height: 120px;
+        transform: scale(1.1, 1.1) rotate(1deg);
+        transition: 600ms all ease-in-out;
+    }
+}
+ion-card p{
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px 4px 0px 4px;
+}
+
+.swiper-slide-active{
+    transform: scale(1.05, 1.05);
+
+    ion-card{
+        img{
+            transform: scale(1, 1);
+        }
+    }
+}
+.swiper-slide{
+    transition: 400ms all ease-in-out;
 }

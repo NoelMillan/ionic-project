@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'reset',
     loadChildren: () => import('./pages/reset/reset.module').then( m => m.ResetPageModule)
+  },  {
+    path: 'center',
+    loadChildren: () => import('./pages/center/center.module').then( m => m.CenterPageModule)
   },
+
 
 ];
 
