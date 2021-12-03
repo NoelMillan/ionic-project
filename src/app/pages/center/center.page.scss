@@ -57,6 +57,27 @@ body{
 }
 .caja-mediana__item{
     font-size: 20px;
+    color: white;
+}
+.caja-mediana__secondary{
+    position: absolute;
+    margin: 120px auto;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    background: linear-gradient(90deg, #CC2B5E, #753A88);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    z-index: 100;
+}
+.caja-mediana__item-secondary{
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: .5rem 5rem .5rem 5rem;
+}
+.caja-mediana__item-secondary:last-child{
+    border: none;
 }
 .letra{
     margin: 0;
