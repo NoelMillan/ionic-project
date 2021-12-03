@@ -1,18 +1,21 @@
 <ion-content>
   <body>
       <!-- Rectángulo con vectores -->
-  <div [@inOutAnimation] *ngIf="!centerPressed" class="nav-bar">
+  <div class="nav-bar">
     <div class="nav-bar__item"></div>
     </div>
   <div class="ion-padding-top nav-bar__text">
-    <div [@inOutAnimation] *ngIf="!centerPressed" class="nav-bar__list">
+    <div class="nav-bar__list">
       <ion-fab vertical="top" horizontal="start" edge slot="fixed" mode="ios">
         <ion-fab-button closeIcon="close">
-          <img src="../../../assets/images/center.png" width="100%">
+          <img src="../../../assets/images/plane.png" width="100%">
         </ion-fab-button>
         <ion-fab-list>
           <ion-fab-button (click)="navigationService.goProfile()">
             <img src="../../../assets/images/perfil.png" width="100%">
+          </ion-fab-button>
+          <ion-fab-button (click)="navigationService.goCenter()">
+            <img src="../../../assets/images/center.png" width="100%">
           </ion-fab-button>
           <ion-fab-button (click)="navigationService.goHome()">
             <img src="../../../assets/images/disconnect.png" width="100%">
@@ -20,67 +23,32 @@
         </ion-fab-list>
       </ion-fab>
     </div>
-    <h2>Centers</h2>
+    <h2>Maps</h2>
   </div>
   <!-- Contenido -->
-  <div class="caja-mediana ion-text-center">
-    <div class="caja-mediana__item">
-      <label>
-        <input type="checkbox" [(ngModel)]="centerPressed">
-        <div class="menu">Málaga</div>
-      </label>
+  <div class="container">
+    <div class="caja-mediana ion-text-center">
+      <div class="caja-mediana__item">Centro Comercial Rosaleda</div>
     </div>
-  </div>
-  <div [@inOutAnimation] *ngIf="centerPressed" class="caja-mediana__secondary ion-text-center">
-    <ion-segment scrollable="true">
-      <ion-segment-button>
-        <div class="caja-mediana__item-secondary">
-          <span>Sevilla</span>
-          <div></div>
-        </div>
-     </ion-segment-button>
-     <ion-segment-button>
-      <div class="caja-mediana__item-secondary">
-        <span>Granada</span>
-        <div></div>
-      </div>
-      </ion-segment-button>
-      <ion-segment-button>
-        <div class="caja-mediana__item-secondary">
-          <span>Almería</span>
-          <div></div>
-        </div>
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-  <div *ngIf="!centerPressed" [@inOutAnimation] class="container">
-    <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slides class="ion-margin-top">
       <ion-slide>
         <ion-card mode="ios">
-          <img src="../../../assets/images/rosaleda.jpg" (click)="navigationService.goInteractiveMaps()">
-          <p>Centro Comercial Rosaleda</p>
+          <img src="../../../assets/images/map-center-1.png">
         </ion-card>
       </ion-slide>
       <ion-slide>
         <ion-card mode="ios">
-          <img src="../../../assets/images/larios.jpg">
-          <p>Larios Centro</p>
+          <img src="../../../assets/images/map-center-1.png">
         </ion-card>
       </ion-slide>
       <ion-slide>
         <ion-card mode="ios">
-          <img src="../../../assets/images/mariazam.jpg">
-          <p>María Zambrano</p>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card mode="ios">
-          <img src="../../../assets/images/malagaplaza.jpg">
-          <p>Málaga Plaza</p>
+          <img src="../../../assets/images/map-center-1.png">
         </ion-card>
       </ion-slide>
     </ion-slides>
   </div>
+  <span class="text-map ion-margin-start">Plano superior&nbsp;<ion-icon name="caret-forward-outline"></ion-icon></span>
     <!-- Rectángulo con vectores -->
     <div class="footer__item"><img src="../../../assets/svg/barra-footer.svg"></div>
     <div class="container-gap">
@@ -107,3 +75,4 @@
     </div>
   </body>
 </ion-content>
+

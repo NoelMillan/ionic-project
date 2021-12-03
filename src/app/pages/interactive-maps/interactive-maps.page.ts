@@ -1,14 +1,12 @@
-import { LocationModalComponent } from './../../components/location-modal/location-modal.component';
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { NavigationService } from 'src/app/services/navigation.service';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-center',
-  templateUrl: './center.page.html',
-  styleUrls: ['./center.page.scss'],
-    animations: [
+  selector: 'app-interactive-maps',
+  templateUrl: './interactive-maps.page.html',
+  styleUrls: ['./interactive-maps.page.scss'],
+  animations: [
     trigger(
       'inOutAnimation', 
       [
@@ -32,26 +30,11 @@ import { animate, style, transition, trigger } from '@angular/animations';
     ),
   ]
 })
-export class CenterPage implements OnInit {
-
-  centerPressed: boolean = false;
-
-  option = {
-    slidesPerView: 1.5,
-    centeredSlides: true,
-    loop: true,
-  };
-
-  iconPressed: boolean = false;
+export class InteractiveMapsPage implements OnInit {
 
   constructor(public navigationService: NavigationService) { }
 
   ngOnInit() {
-    this.iconPressed = false;
-  }
-
-  cambia(){
-    this.iconPressed = !this.iconPressed;
   }
 
 }

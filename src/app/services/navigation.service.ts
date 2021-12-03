@@ -26,4 +26,7 @@ export class NavigationService {
   goCenter(){
     this.router.navigateByUrl('/center')
   }
+  goInteractiveMaps(){
+    this.router.navigateByUrl('/interactive-maps')
+  }
 }
