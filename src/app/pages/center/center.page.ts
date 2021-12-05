@@ -1,4 +1,3 @@
-import { LocationModalComponent } from './../../components/location-modal/location-modal.component';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NavigationService } from 'src/app/services/navigation.service';

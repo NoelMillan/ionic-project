@@ -28,24 +28,24 @@
         <p class="disabled">Reviews</p>
       </div>
     </div>
-    <div class="container__item-down">
+    <div *ngIf="user" class="container__item-down">
       <div class="item-down__inline">
         <div class="caja-chica">
           <h5 class="letra ion-text-center">Name</h5>
         </div>
-        <p>Noel Millán Rebollo</p>
+        <p>{{user.firstName}} {{user.lastName}}</p>
       </div>
       <div class="item-down__inline">
         <div class="caja-chica">
           <h5 class="letra ion-text-center">Email</h5>
         </div>
-        <p class="letra-email">noel.millan@hotmail.com</p>
+        <p class="letra-email">{{user.email}}</p>
       </div>
       <div class="item-down__inline">
         <div class="caja-chica">
           <h5 class="letra ion-text-center">Password</h5>
         </div>
-        <span><p>**************<br><div (click)="navigationService.goReset()">Change your password</div></p></span>
+        <span><p>***************<br><div (click)="show()">Change your password</div></p></span>
       </div>
     </div>
   </div>

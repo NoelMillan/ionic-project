@@ -1,3 +1,5 @@
+import { User } from './../../models/user';
+import { UsersService } from './../../services/users.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
@@ -9,8 +11,9 @@ import { NavigationService } from 'src/app/services/navigation.service';
 export class ProfilePage implements OnInit {
 
   iconPressed: boolean = false;
+  user = this.userService.userLogged;
 
-  constructor(public navigationService: NavigationService) { }
+  constructor(public navigationService: NavigationService, public userService: UsersService) { }
 
   ngOnInit() {
     this.iconPressed = false;
@@ -18,6 +21,10 @@ export class ProfilePage implements OnInit {
 
   cambia(){
     this.iconPressed = !this.iconPressed
+  }
+
+  show(){
+    console.log(this.userService.userLogged)
   }
 
 }
