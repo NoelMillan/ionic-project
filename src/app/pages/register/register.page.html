@@ -1,7 +1,7 @@
 <ion-content>
   <body>
     <div class="container">
-      <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+      <form [formGroup]="registrationForm">
       <div class="caja-grande ion-text-center">
         <h1 class="letra">Register</h1>
       </div>
@@ -25,11 +25,11 @@
         <ion-input formControlName="password" type="password" [(ngModel)]="user.password"></ion-input>
       </ion-item>
       <ion-item mode="md" class="ion-padding-start">
-        <ion-checkbox color="dark"></ion-checkbox>
+        <ion-checkbox color="dark" (click)="termsChecked = !termsChecked"></ion-checkbox>
         <span class="ion-padding-start letra-chica">I accept the <strong><a class="letra-register"><i>terms of use</i></a></strong></span>
       </ion-item>
       <div class="ion-text-center">
-        <button [disabled]="!registrationForm.valid" type="submit" class="caja-chica ion-text-center" (click)="registerUser(); navigationService.goHome()">
+        <button [disabled]="!registrationForm.valid || !termsChecked" type="submit" class="caja-chica ion-text-center" (click)="registerUser(); navigationService.goHome()">
           <h5 class="letra">Sign Up</h5>
         </button>
         <br>

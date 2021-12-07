@@ -8,10 +8,12 @@ export class UsersService {
 
   users: User[] = [];
   userLogged: User;
+  userId = 0;
 
   constructor() { }
 
   newUser(user: User){
+    user.id = this.userId++;
     this.users.push(user);
   }
   show(){

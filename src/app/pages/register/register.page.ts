@@ -11,7 +11,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegisterPage implements OnInit {
 
-  user: User = {id: this.userService.users.length, firstName: null, lastName: null, email: null, password: null};
+  user: User = {id: null, firstName: null, lastName: null, email: null, password: null};
+  termsChecked: boolean;
 
   registrationForm = this.formBuilder.group({
     firstName: [this.user.firstName, [Validators.required]],
@@ -28,10 +29,6 @@ export class RegisterPage implements OnInit {
   registerUser(){
     this.userService.newUser(this.user);
     console.log(this.userService.users);
-  }
-
-  public submit(){
-    console.log(this.registrationForm.value);
   }
 
 }
