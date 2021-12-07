@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { User } from './../../models/user';
 import { UsersService } from './../../services/users.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,9 +12,9 @@ import { NavigationService } from 'src/app/services/navigation.service';
 export class ProfilePage implements OnInit {
 
   iconPressed: boolean = false;
-  user = this.userService.userLogged;
+  user: User = this.userService.userLogged;
 
-  constructor(public navigationService: NavigationService, public userService: UsersService) { }
+  constructor(public navigationService: NavigationService, public userService: UsersService, private router: Router) { }
 
   ngOnInit() {
     this.iconPressed = false;
@@ -24,7 +25,7 @@ export class ProfilePage implements OnInit {
   }
 
   show(){
-    console.log(this.userService.userLogged)
+    this.router.navigateByUrl('home')
   }
 
 }

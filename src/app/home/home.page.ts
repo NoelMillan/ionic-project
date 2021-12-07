@@ -17,7 +17,7 @@ export class HomePage {
   cont = 0;
 
   constructor(public navigationService: NavigationService, public userService: UsersService, public toastController: ToastController) {
-    
+    userService.userLogged = null;
   }
 
   login(){
@@ -34,7 +34,8 @@ export class HomePage {
     }
     if(this.isValid){
       this.navigationService.goProfile();
-      this.userService.userLogged = {...this.userService.users.filter(user => user.email === this.email)[this.cont]};
+      this.userService.logIn(this.cont, this.email);
+      // this.userService.userLogged = {...this.userService.users.filter(user => user.email === this.email)[this.cont]};
       // console.log(this.userService.users.filter(user => user.email === this.email));
     } else{
       this.presentToast();

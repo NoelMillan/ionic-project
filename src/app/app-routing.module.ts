@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'center',
     loadChildren: () => import('./pages/center/center.module').then( m => m.CenterPageModule)
-  },  {
+  },
+  {
     path: 'interactive-maps',
     loadChildren: () => import('./pages/interactive-maps/interactive-maps.module').then( m => m.InteractiveMapsPageModule)
   },

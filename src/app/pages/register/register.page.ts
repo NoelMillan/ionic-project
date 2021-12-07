@@ -25,9 +25,8 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {
   }
-
   registerUser(){
-    this.userService.newUser(this.user);
+    this.userService.saveUser(this.user);
     console.log(this.userService.users);
   }
 
