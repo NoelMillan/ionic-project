@@ -11,7 +11,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegisterPage implements OnInit {
 
-  user: User = {id: null, firstName: null, lastName: null, email: null, password: null};
+  user: User = {id: null, firstName: null, lastName: null, email: null, password: null, centersVisited: 0, reviews: 0};
   termsChecked: boolean;
 
   registrationForm = this.formBuilder.group({

@@ -18,17 +18,18 @@
     </div>
   <!-- Contenido -->
   <div class="container">
+    <ng-container *ngIf="user">
     <div class="container__item-up">
       <div class="ion-text-center ion-padding-end">
-        <h1>7</h1>
+        <h1>{{user.centersVisited}}</h1>
         <p class="disabled">Shopping centers visited</p>
       </div>
       <div class="ion-text-center ion-padding-start">
-        <h1>4</h1>
+        <h1>{{user.reviews}}</h1>
         <p class="disabled">Reviews</p>
       </div>
     </div>
-    <div *ngIf="user" class="container__item-down">
+    <div class="container__item-down">
       <div class="item-down__inline">
         <div class="caja-chica">
           <h5 class="letra ion-text-center">Name</h5>
@@ -45,9 +46,10 @@
         <div class="caja-chica">
           <h5 class="letra ion-text-center">Password</h5>
         </div>
-        <span><p>***************<br><div (click)="navigationService.goRecover()">Change your password</div></p></span>
+        <span><p>***************<br><div (click)="navigationService.goReset()">Change your password</div></p></span>
       </div>
     </div>
+    </ng-container>
   </div>
   <!-- Rectángulo con vectores -->
   <div class="footer__item"><img src="../../../assets/svg/barra-footer.svg"></div>
