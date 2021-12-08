@@ -27,56 +27,28 @@
     <div class="caja-mediana__item">
       <label>
         <input type="checkbox" [(ngModel)]="centerPressed">
-        <div class="menu">Málaga</div>
+        <div class="menu">{{locationPressed}}</div>
       </label>
     </div>
   </div>
   <div [@inOutAnimation] *ngIf="centerPressed" class="caja-mediana__secondary ion-text-center">
-    <ion-segment scrollable="true">
-      <ion-segment-button>
+    <ion-segment scrollable mode="md">
+      <ng-container *ngFor="let l of locations">
+      <ion-segment-button (click)="locationPressed = l.name; locationChanged()">
         <div class="caja-mediana__item-secondary">
-          <span>Sevilla</span>
-          <div></div>
-        </div>
-     </ion-segment-button>
-     <ion-segment-button>
-      <div class="caja-mediana__item-secondary">
-        <span>Granada</span>
-        <div></div>
-      </div>
-      </ion-segment-button>
-      <ion-segment-button>
-        <div class="caja-mediana__item-secondary">
-          <span>Almería</span>
+          <span>{{l.name}}</span>
           <div></div>
         </div>
       </ion-segment-button>
+      </ng-container>
     </ion-segment>
   </div>
   <div *ngIf="!centerPressed" [@inOutAnimation] class="container">
     <ion-slides [options]="option" class="ion-margin-top">
-      <ion-slide>
-        <ion-card mode="ios">
-          <img src="../../../assets/images/rosaleda.jpg" (click)="navigationService.goInteractiveMaps()">
-          <p>Centro Comercial Rosaleda</p>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card mode="ios">
-          <img src="../../../assets/images/larios.jpg">
-          <p>Larios Centro</p>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card mode="ios">
-          <img src="../../../assets/images/mariazam.jpg">
-          <p>María Zambrano</p>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card mode="ios">
-          <img src="../../../assets/images/malagaplaza.jpg">
-          <p>Málaga Plaza</p>
+      <ion-slide *ngFor="let c of centers">
+        <ion-card mode="ios" (click)="navigationService.goInteractiveMaps(); locationsService.getCenter(c)">
+          <img src="{{c.img}}">
+          <p>{{c.name}}</p>
         </ion-card>
       </ion-slide>
     </ion-slides>

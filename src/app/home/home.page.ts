@@ -33,7 +33,7 @@ export class HomePage {
       }
     }
     if(this.isValid){
-      this.navigationService.goProfile();
+      this.navigationService.goCenter();
       this.userService.logIn(this.cont, this.email);
       // this.userService.userLogged = {...this.userService.users.filter(user => user.email === this.email)[this.cont]};
       // console.log(this.userService.users.filter(user => user.email === this.email));

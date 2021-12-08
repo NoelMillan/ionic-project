@@ -1,3 +1,4 @@
+import { LocationsService } from './../../services/locations.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NavigationService } from 'src/app/services/navigation.service';
@@ -34,16 +35,20 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class CenterPage implements OnInit {
 
   centerPressed: boolean = false;
+  locationPressed = "Málaga";
+  centers = this.locationsService.centers.filter(center => center.location === this.locationPressed);
+  locations = this.locationsService.locations;
 
   option = {
-    slidesPerView: 1.5,
+    initialSlide: 1,
+    slidesPerView: 1.25,
     centeredSlides: true,
     loop: true,
   };
 
   iconPressed: boolean = false;
 
-  constructor(public navigationService: NavigationService) { }
+  constructor(public navigationService: NavigationService, public locationsService: LocationsService) {}
 
   ngOnInit() {
     this.iconPressed = false;
@@ -51,6 +56,10 @@ export class CenterPage implements OnInit {
 
   cambia(){
     this.iconPressed = !this.iconPressed;
+  }
+
+  locationChanged(){
+    this.centers = this.locationsService.centers.filter(center => center.location === this.locationPressed);
   }
 
 }

@@ -1,3 +1,5 @@
+import { Center } from './../../models/center';
+import { LocationsService } from './../../services/locations.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
@@ -32,9 +34,12 @@ import { NavigationService } from 'src/app/services/navigation.service';
 })
 export class InteractiveMapsPage implements OnInit {
 
-  constructor(public navigationService: NavigationService) { }
+  center: Center;
+
+  constructor(public navigationService: NavigationService, public locationsService: LocationsService) { }
 
   ngOnInit() {
+    this.center = this.locationsService.chosenCenter;
   }
 
 }

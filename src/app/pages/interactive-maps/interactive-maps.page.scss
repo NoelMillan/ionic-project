@@ -61,10 +61,13 @@ body{
     color: white;
 }
 .text-map{
+    color: black;
     font-size: 18px;
     font-weight: 600;
     display: inline-flex;
-    border-bottom: 2px solid black;
+}
+.indicators{
+    margin: 0px 10px 0px 10px;
 }
 .footer__item{
     position: absolute;
@@ -147,7 +150,7 @@ ion-slides {
 
 ion-card{
     width: 100%;
-    height: 200px;
+    height: 220px;
     --background: whitesmoke;
     transition: 1s;
     img {
@@ -159,11 +162,6 @@ ion-card{
         transition: 600ms all ease-in-out;
         margin: 40px auto 0px auto;
     }
-}
-ion-card p{
-    color: white;
-    font-size: 16px;
-    padding: 0px 8px 0px 8px;
 }
 
 .swiper-slide-active{

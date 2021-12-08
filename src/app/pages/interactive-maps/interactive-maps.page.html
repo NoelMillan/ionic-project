@@ -27,28 +27,29 @@
   </div>
   <!-- Contenido -->
   <div class="container">
-    <div class="caja-mediana ion-text-center">
-      <div class="caja-mediana__item">Centro Comercial Rosaleda</div>
+    <div *ngIf="center" class="caja-mediana ion-text-center">
+      <div class="caja-mediana__item">{{center.name}}</div>
     </div>
     <ion-slides class="ion-margin-top">
       <ion-slide>
         <ion-card mode="ios">
           <img src="../../../assets/images/map-center-1.png">
+          <span class="text-map ion-margin-start">Plano superior&nbsp;<ion-icon name="caret-forward-outline"></ion-icon></span>
         </ion-card>
       </ion-slide>
       <ion-slide>
         <ion-card mode="ios">
-          <img src="../../../assets/images/map-center-1.png">
+          <img src="../../../assets/images/map-center-2.png">
         </ion-card>
       </ion-slide>
       <ion-slide>
         <ion-card mode="ios">
-          <img src="../../../assets/images/map-center-1.png">
+          <img src="../../../assets/images/map-center-3.png">
         </ion-card>
       </ion-slide>
     </ion-slides>
   </div>
-  <span class="text-map ion-margin-start">Plano superior&nbsp;<ion-icon name="caret-forward-outline"></ion-icon></span>
+  <img class="indicators" src="../../../assets/images/indicators.png">
     <!-- Rectángulo con vectores -->
     <div class="footer__item"><img src="../../../assets/svg/barra-footer.svg"></div>
     <div class="container-gap">
