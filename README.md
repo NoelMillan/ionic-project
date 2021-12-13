@@ -5,6 +5,16 @@
 #
 ##### El usuario podrá elegir una localidad, y en dicha localidad aparecerán sus respectivos centros, todo a través de un diseño amigable para el usuario. Al pulsar en un centro se podrá ver su mapa interactivo junto a sus diferentes planos, ya sea de su piso superior, inferior, etc.
 #
+---
+##### 7 Páginas
+#
+##### 2 Componentes
+#
+##### 3 Modelos
+#
+##### 3 Servicios
+###
+---
 #### Capturas de pantalla
 #
 ### Login
